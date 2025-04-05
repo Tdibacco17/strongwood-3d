@@ -37,6 +37,12 @@ export interface KitchenSegmentInput {
   ajusteEsquina?: 'adelante' | 'atras';
   alturaBajo?: number;
   separacionEntrePisos?: number;
+  isla?: {
+    position: 'izquierda' | 'derecha';    
+    distanciaBorde: number;   
+    distanciaFrente?: number;
+    data: KitchenSegmentInput;
+  };
 }
 
 export interface KitchenModuleData {
@@ -44,7 +50,6 @@ export interface KitchenModuleData {
   tieneIsla: boolean;
   pasillo?: number;
   segmentos: KitchenSegmentInput[];
-  isla?: KitchenSegmentInput;
 }
 
 export interface ComputedSegment {

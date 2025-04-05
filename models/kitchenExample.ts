@@ -1,8 +1,8 @@
 import { KitchenModuleData } from "@/types/cocinaTypes";
 
 const kitchenExample: KitchenModuleData = {
-  tipo: "paralela",
-  tieneIsla: false,
+  tipo: "L",
+  tieneIsla: true,
   pasillo: 2,
   segmentos: [
     {
@@ -68,11 +68,33 @@ const kitchenExample: KitchenModuleData = {
           modelo: "cube",
           medidas: { ancho: 0.8, alto: 0.7, profundidad: 0.45 }
         },
-      ]
+      ],
+      // isla: {
+      //   position: 'izquierda',
+      //   distanciaBorde: 0.5,
+      //   distanciaFrente: 2,
+      //   data: {
+      //     id: 'isla-01',
+      //     // tieneZocalo: 0.1,
+      //     alturaAlacenas: 0,
+      //     pisoModules: [
+      //       {
+      //         id: 'isla-m1',
+      //         tipo: "isla",
+      //         modelo: "cube",
+      //         medidas: { ancho: 1.5, alto: 0.8, profundidad: 1 }
+      //       }
+      //     ],
+      //     alacenaModules: [],
+      //     alturaBajo: 0.9,
+      //     separacionEntrePisos: 0.6
+      //   }
+      // }
     },
     {
       id: 'seg-02',
       alturaAlacenas: 1.5,
+      tieneZocalo: 0.1,
       // posicionInicial: 'izquierdo
       ajusteEsquina: "adelante",
       pisoModules: [
@@ -90,11 +112,33 @@ const kitchenExample: KitchenModuleData = {
           modelo: "cube",
           medidas: { ancho: 2.4, alto: 0.7, profundidad: 0.5 }
         }
-      ]
+      ],
+      isla: {
+        position: 'derecha',
+        distanciaBorde: 0.5,
+        distanciaFrente: 0,
+        data: {
+          id: 'isla-01',
+          // tieneZocalo: 0.1,
+          alturaAlacenas: 0,
+          pisoModules: [
+            {
+              id: 'isla-m1',
+              tipo: "isla",
+              modelo: "cube",
+              medidas: { ancho: 1.5, alto: 0.8, profundidad: 1 }
+            }
+          ],
+          alacenaModules: [],
+          alturaBajo: 0.9,
+          separacionEntrePisos: 0.6
+        }
+      }
     },
     {
       id: 'seg-03',
       alturaAlacenas: 1.5,
+      tieneZocalo: 0.1,
       // posicionInicial: 'derecho',
       ajusteEsquina: "atras",
       pisoModules: [
@@ -119,7 +163,7 @@ const kitchenExample: KitchenModuleData = {
       ],
       alacenaModules: []
     }
-  ]
+  ],
 };
 
 export default kitchenExample;

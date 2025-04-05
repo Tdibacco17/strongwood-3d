@@ -19,12 +19,13 @@ export default function KitchenSegmentComp({
     const firstModuleProfundidad = pisoModules[0]?.medidas.profundidad ?? 0;
     const zocaloDepth = firstModuleProfundidad - 0.05;
     const zocaloZ = firstModuleProfundidad / 2 - 0.025;
+    const esIsla = pisoModules.length > 0 && pisoModules.every(m => m.tipo === "isla");
 
     return (
         <group position={position} rotation={rotation}>
             {/* Zócalo: se dibuja si tieneZocalo > 0.Se posiciona de modo que su borde superior quede en Y = 0 */}
-            {tieneZocalo > 0 && (
-                <mesh position={[totalWidth / 2, -tieneZocalo / 2, zocaloZ]}>
+            {!esIsla && tieneZocalo > 0 && (
+                <mesh position={[totalWidth / 2, tieneZocalo / 2, zocaloZ]}>
                     <boxGeometry args={[totalWidth, tieneZocalo, zocaloDepth]} />
                     <meshStandardMaterial color="#cccccc" />
                 </mesh>
@@ -36,7 +37,8 @@ export default function KitchenSegmentComp({
                 const x = currentX_Piso + ancho / 2;
                 // Si alto > 0, la base es Y = 0, por lo tanto su centro es alto/2.
                 // Si es "espacio" (alto 0) queda en 0.
-                const y = alto > 0 ? alto / 2 : 0;
+                const y = alto > 0 ? (alto / 2 + tieneZocalo) : 0;
+
                 // Posicionamos en Z para que el fondo (lado trasero) esté en Z = 0,
                 // es decir, ponemos el objeto en Z = profundidad/2 (suponiendo modelo centrado).
                 const z = profundidad / 2;
@@ -48,6 +50,7 @@ export default function KitchenSegmentComp({
                         mueble={mod}
                         posicion={[x, y, z]}
                         rotacionY={0}
+                        esIsla={esIsla}
                     />
                 );
             })}
