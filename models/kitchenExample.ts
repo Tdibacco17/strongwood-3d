@@ -1,14 +1,15 @@
 import { KitchenModuleData } from "@/types/cocinaTypes";
 
 const kitchenExample: KitchenModuleData = {
-  tipo: "U",
+  tipo: "paralela",
   tieneIsla: false,
+  pasillo: 2,
   segmentos: [
     {
       id: 'seg-01',
       tieneZocalo: 0.1,
       alturaAlacenas: 1.5,
-      posicionInicial: 'frente',
+      // posicionInicial: 'frente',
       ajusteEsquina: undefined,
       pisoModules: [
         {
@@ -72,8 +73,8 @@ const kitchenExample: KitchenModuleData = {
     {
       id: 'seg-02',
       alturaAlacenas: 1.5,
-      posicionInicial: 'izquierdo',
-      ajusteEsquina: "atras",
+      // posicionInicial: 'izquierdo
+      ajusteEsquina: "adelante",
       pisoModules: [
         {
           id: 'm7',
@@ -94,8 +95,8 @@ const kitchenExample: KitchenModuleData = {
     {
       id: 'seg-03',
       alturaAlacenas: 1.5,
-      posicionInicial: 'derecho',
-      ajusteEsquina: "adelante",
+      // posicionInicial: 'derecho',
+      ajusteEsquina: "atras",
       pisoModules: [
         {
           id: 'm8',

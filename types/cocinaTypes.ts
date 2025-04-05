@@ -32,12 +32,11 @@ export interface KitchenSegmentInput {
   id?: string;
   tieneZocalo?: number;
   alturaAlacenas: number;
-  posicionInicial?: 'frente' | 'derecho' | 'fondo' | 'izquierdo';
   pisoModules: ModuleData[];
   alacenaModules: ModuleData[];
   ajusteEsquina?: 'adelante' | 'atras';
-  alturaBajo?: number; // 👈 Necesario para computeKitchenSegments
-  separacionEntrePisos?: number; // 👈 También
+  alturaBajo?: number;
+  separacionEntrePisos?: number;
 }
 
 export interface KitchenModuleData {
