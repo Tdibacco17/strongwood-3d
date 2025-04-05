@@ -1,13 +1,8 @@
 import { KitchenModuleData } from "@/types/cocinaTypes";
 
 const kitchenExample: KitchenModuleData = {
-  tipo: "lineal",
+  tipo: "U",
   tieneIsla: false,
-  medidasAmbiente: {
-    ancho: 4,
-    largo: 3.5,
-    alto: 2.5,
-  },
   segmentos: [
     {
       id: 'seg-01',
@@ -74,53 +69,55 @@ const kitchenExample: KitchenModuleData = {
         },
       ]
     },
-    // {
-    //   id: 'seg-02',
-    //   posicionInicial: 'izquierdo',
-    //   ajusteEsquina: "adelante",
-    //   pisoModules: [
-    //     {
-    //       id: 'm7',
-    //       tipo: "bajo_mesada",
-    //       modelo: "cube",
-    //       medidas: { ancho: 2.4, alto: 0.8, profundidad: 0.5 }
-    //     }
-    //   ],
-    //   alacenaModules: [
-    //     {
-    //       id: 'a3',
-    //       tipo: "alacena",
-    //       modelo: "cube",
-    //       medidas: { ancho: 2.4, alto: 0.7, profundidad: 0.5 }
-    //     }
-    //   ]
-    // },
-    // {
-    //   id: 'seg-03',
-    //   posicionInicial: 'derecho',
-    //   ajusteEsquina: "atras",
-    //   pisoModules: [
-    //     {
-    //       id: 'm8',
-    //       tipo: "bajo_mesada",
-    //       modelo: "cube",
-    //       medidas: { ancho: 1.1, alto: 0.8, profundidad: 0.6 }
-    //     },
-    //     {
-    //       id: 'm9',
-    //       tipo: "bajo_mesada",
-    //       modelo: "cube",
-    //       medidas: { ancho: 1.0, alto: 0.8, profundidad: 0.6 }
-    //     },
-    //     {
-    //       id: 'm10',
-    //       tipo: "bajo_mesada",
-    //       modelo: "cube",
-    //       medidas: { ancho: 1.0, alto: 0.8, profundidad: 0.6 }
-    //     }
-    //   ],
-    //   alacenaModules: []
-    // }
+    {
+      id: 'seg-02',
+      alturaAlacenas: 1.5,
+      posicionInicial: 'izquierdo',
+      ajusteEsquina: "atras",
+      pisoModules: [
+        {
+          id: 'm7',
+          tipo: "bajo_mesada",
+          modelo: "cube",
+          medidas: { ancho: 2.4, alto: 0.8, profundidad: 0.6 }
+        }
+      ],
+      alacenaModules: [
+        {
+          id: 'a3',
+          tipo: "alacena",
+          modelo: "cube",
+          medidas: { ancho: 2.4, alto: 0.7, profundidad: 0.5 }
+        }
+      ]
+    },
+    {
+      id: 'seg-03',
+      alturaAlacenas: 1.5,
+      posicionInicial: 'derecho',
+      ajusteEsquina: "adelante",
+      pisoModules: [
+        {
+          id: 'm8',
+          tipo: "bajo_mesada",
+          modelo: "cube",
+          medidas: { ancho: 1.1, alto: 0.8, profundidad: 0.6 }
+        },
+        {
+          id: 'm9',
+          tipo: "bajo_mesada",
+          modelo: "cube",
+          medidas: { ancho: 1.0, alto: 0.8, profundidad: 0.6 }
+        },
+        {
+          id: 'm10',
+          tipo: "bajo_mesada",
+          modelo: "cube",
+          medidas: { ancho: 1.0, alto: 0.8, profundidad: 0.6 }
+        }
+      ],
+      alacenaModules: []
+    }
   ]
 };
 

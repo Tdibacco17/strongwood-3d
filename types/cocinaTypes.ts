@@ -44,11 +44,6 @@ export interface KitchenModuleData {
   tipo: LayoutType;
   tieneIsla: boolean;
   pasillo?: number;
-  medidasAmbiente?: {
-    ancho: number;
-    largo: number;
-    alto: number;
-  };
   segmentos: KitchenSegmentInput[];
   isla?: KitchenSegmentInput;
 }
