@@ -8,15 +8,13 @@ import KitchenRenderer from './KitchenRenderer';
 
 export default function Scene() {
   return (
-    <div className="w-full h-full">
-      <Canvas camera={{ position: [3, 2, 5], fov: 45 }}>
-        <ambientLight intensity={0.6} />
-        <directionalLight position={[5, 10, 5]} intensity={1} />
-        <Suspense fallback={null}>
-          <KitchenRenderer kitchenRender={kitchenExample} />
-        </Suspense>
-        <OrbitControls />
-      </Canvas>
-    </div>
+    <Canvas camera={{ position: [-6, 3.2, 10], fov: 30 }}>
+      <ambientLight intensity={0.6} />
+      <directionalLight position={[5, 10, 5]} intensity={1} />
+      <Suspense fallback={null}>
+        <KitchenRenderer kitchenRender={kitchenExample} />
+      </Suspense>
+      <OrbitControls target={[3.41, 0.65, 0.66]} />
+    </Canvas>
   );
 }

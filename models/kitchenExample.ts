@@ -1,7 +1,7 @@
 import { KitchenModuleData } from "@/types/cocinaTypes";
 
 const kitchenExample: KitchenModuleData = {
-  tipo: "L",
+  tipo: "U",
   tieneIsla: true,
   pasillo: 2,
   segmentos: [
