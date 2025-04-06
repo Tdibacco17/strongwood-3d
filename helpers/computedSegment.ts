@@ -23,7 +23,9 @@ export function computeKitchenSegments(layoutInput: KitchenModuleData): Computed
             const isla = seg.isla.data;
             const distanciaBorde = seg.isla.distanciaBorde ?? 0;
             const distanciaFrente = seg.isla.distanciaFrente ?? 0;
-            const profSeg = seg.isla.data.pisoModules[0]?.medidas.profundidad ?? 0;
+
+            const anchoLateral = computeTotalWidth(lateral.pisoModules);
+
 
             const anchoIsla = computeTotalWidth(isla.pisoModules);
             const profundidadSeg = seg.pisoModules[0]?.medidas.profundidad ?? 0;
@@ -41,12 +43,25 @@ export function computeKitchenSegments(layoutInput: KitchenModuleData): Computed
                 zPos = profundidadSeg + distanciaFrente;
             } else {
                 const ajuste = seg.ajusteEsquina ?? "adelante";
-                xPos = anchoBase - profLateral;
 
-                if (ajuste === "adelante") {
-                    zPos = profBase
-                } else if (ajuste === "atras") {
+                if (seg.isla.position === "izquierda") {
+                    if (ajuste === "adelante") {
+                        xPos = anchoBase - profLateral;
+                        zPos = profBase
+                    } else if (ajuste === "atras") {
+                        xPos = anchoBase;
+                    }
                 }
+                if (seg.isla.position === "derecha") {
+                    if (ajuste === "adelante") {
+                        xPos = anchoBase - profLateral;
+                        zPos = anchoLateral - anchoIsla + profBase;
+                    } else if (ajuste === "atras") {
+                        xPos = anchoBase;
+                        zPos = anchoLateral - anchoIsla;
+                    }
+                }
+                xPos -= seg.isla.distanciaFrente ?? 0;
             }
 
             computed.push({

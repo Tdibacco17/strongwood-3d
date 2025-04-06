@@ -11,7 +11,7 @@ type MuebleProps = {
   esIsla?: boolean;
 };
 
-export default function ModuleBlock({ mueble, posicion, rotacionY = 0, esIsla }: MuebleProps) {
+export default function ModuleBlock({ mueble, posicion, rotacionY = 0 }: MuebleProps) {
   // const gltf = useGLTF(`/models/${mueble.modelo}.glb`);
 
   // Clonamos el objeto para evitar que todos compartan el mismo

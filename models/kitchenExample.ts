@@ -9,8 +9,6 @@ const kitchenExample: KitchenModuleData = {
       id: 'seg-01',
       tieneZocalo: 0.1,
       alturaAlacenas: 1.5,
-      // posicionInicial: 'frente',
-      ajusteEsquina: undefined,
       pisoModules: [
         {
           id: 'm1',
@@ -95,7 +93,6 @@ const kitchenExample: KitchenModuleData = {
       id: 'seg-02',
       alturaAlacenas: 1.5,
       tieneZocalo: 0.1,
-      // posicionInicial: 'izquierdo
       ajusteEsquina: "adelante",
       pisoModules: [
         {
@@ -113,33 +110,32 @@ const kitchenExample: KitchenModuleData = {
           medidas: { ancho: 2.4, alto: 0.7, profundidad: 0.5 }
         }
       ],
-      isla: {
-        position: 'derecha',
-        distanciaBorde: 0.5,
-        distanciaFrente: 0,
-        data: {
-          id: 'isla-01',
-          // tieneZocalo: 0.1,
-          alturaAlacenas: 0,
-          pisoModules: [
-            {
-              id: 'isla-m1',
-              tipo: "isla",
-              modelo: "cube",
-              medidas: { ancho: 1.5, alto: 0.8, profundidad: 1 }
-            }
-          ],
-          alacenaModules: [],
-          alturaBajo: 0.9,
-          separacionEntrePisos: 0.6
-        }
-      }
+      // isla: {
+      //   position: 'derecha',
+      //   distanciaBorde: 0.5,
+      //   distanciaFrente: 3,
+      //   data: {
+      //     id: 'isla-01',
+      //     // tieneZocalo: 0.1,
+      //     alturaAlacenas: 0,
+      //     pisoModules: [
+      //       {
+      //         id: 'isla-m1',
+      //         tipo: "isla",
+      //         modelo: "cube",
+      //         medidas: { ancho: 1.5, alto: 0.8, profundidad: 1 }
+      //       }
+      //     ],
+      //     alacenaModules: [],
+      //     alturaBajo: 0.9,
+      //     separacionEntrePisos: 0.6
+      //   }
+      // }
     },
     {
       id: 'seg-03',
       alturaAlacenas: 1.5,
       tieneZocalo: 0.1,
-      // posicionInicial: 'derecho',
       ajusteEsquina: "atras",
       pisoModules: [
         {

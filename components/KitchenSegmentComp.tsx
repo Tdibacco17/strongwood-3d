@@ -1,6 +1,6 @@
 'use client';
 
-import { ComputedSegment, ModuleData } from "@/types/cocinaTypes";
+import { ComputedSegment } from "@/types/cocinaTypes";
 import ModuleBlock from "./ModuleBlock";
 
 export default function KitchenSegmentComp({
