@@ -8,7 +8,7 @@ import KitchenRenderer from './KitchenRenderer';
 
 export default function Scene() {
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-full">
       <Canvas camera={{ position: [3, 2, 5], fov: 45 }}>
         <ambientLight intensity={0.6} />
         <directionalLight position={[5, 10, 5]} intensity={1} />
