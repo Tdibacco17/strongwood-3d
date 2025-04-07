@@ -13,19 +13,19 @@ const kitchenExample: KitchenModuleData = {
         {
           id: 'm1',
           tipo: "bajo_mesada",
-          modelo: "cube",
+          modelo: "bajo",
           medidas: { ancho: 1.8, alto: 0.8, profundidad: 0.6 }
         },
         {
           id: 'm2',
           tipo: "espacio",
-          modelo: "cube",
+          modelo: "bajo",
           medidas: { ancho: 0.6, alto: 0, profundidad: 0.6 }
         },
         {
           id: 'm3',
           tipo: "bajo_mesada",
-          modelo: "cube",
+          modelo: "bajo",
           medidas: { ancho: 0.8, alto: 0.8, profundidad: 0.6 }
         },
         {
@@ -67,27 +67,27 @@ const kitchenExample: KitchenModuleData = {
           medidas: { ancho: 0.8, alto: 0.7, profundidad: 0.45 }
         },
       ],
-      // isla: {
-      //   position: 'izquierda',
-      //   distanciaBorde: 0.5,
-      //   distanciaFrente: 2,
-      //   data: {
-      //     id: 'isla-01',
-      //     // tieneZocalo: 0.1,
-      //     alturaAlacenas: 0,
-      //     pisoModules: [
-      //       {
-      //         id: 'isla-m1',
-      //         tipo: "isla",
-      //         modelo: "cube",
-      //         medidas: { ancho: 1.5, alto: 0.8, profundidad: 1 }
-      //       }
-      //     ],
-      //     alacenaModules: [],
-      //     alturaBajo: 0.9,
-      //     separacionEntrePisos: 0.6
-      //   }
-      // }
+      isla: {
+        position: 'izquierda',
+        distanciaBorde: 0,
+        distanciaFrente: 3,
+        data: {
+          id: 'isla-01',
+          // tieneZocalo: 0.1,
+          alturaAlacenas: 0,
+          pisoModules: [
+            {
+              id: 'isla-m1',
+              tipo: "isla",
+              modelo: "cube",
+              medidas: { ancho: 1.5, alto: 0.8, profundidad: 1 }
+            }
+          ],
+          alacenaModules: [],
+          alturaBajo: 0.9,
+          separacionEntrePisos: 0.6
+        }
+      }
     },
     {
       id: 'seg-02',
@@ -98,7 +98,7 @@ const kitchenExample: KitchenModuleData = {
         {
           id: 'm7',
           tipo: "bajo_mesada",
-          modelo: "cube",
+          modelo: "bajo",
           medidas: { ancho: 2.4, alto: 0.8, profundidad: 0.6 }
         }
       ],

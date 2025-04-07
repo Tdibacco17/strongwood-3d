@@ -12,25 +12,22 @@ type MuebleProps = {
 };
 
 export default function ModuleBlock({ mueble, posicion, rotacionY = 0 }: MuebleProps) {
-  // const gltf = useGLTF(`/models/${mueble.modelo}.glb`);
+  if (mueble.tipo === 'espacio') return null;
 
-  // Clonamos el objeto para evitar que todos compartan el mismo
+  // const modeloPath = `/models/${mueble.modelo}.glb`;
+
+  // const gltf = useGLTF(modeloPath);
+
   // const clonedScene = useMemo(() => gltf.scene.clone(), [gltf.scene]);
-  if (mueble.tipo === "espacio") return null;
 
   return (
     // <primitive
     //   object={clonedScene}
     //   position={posicion}
     //   rotation={[0, rotacionY, 0]}
-    //   scale={[
-    //     mueble.medidas.ancho,
-    //     mueble.medidas.alto,
-    //     mueble.medidas.profundidad
-    //   ]}
+    //   scale={[mueble.medidas.ancho, mueble.medidas.alto, mueble.medidas.profundidad]}
     //   dispose={null}
     // />
-
     <mesh position={posicion} rotation={[0, rotacionY, 0]}>
       <boxGeometry
         args={[
@@ -44,4 +41,5 @@ export default function ModuleBlock({ mueble, posicion, rotacionY = 0 }: MuebleP
   );
 }
 
+// useGLTF.preload('/models/bajo.glb');
 // useGLTF.preload('/models/cube.glb');
